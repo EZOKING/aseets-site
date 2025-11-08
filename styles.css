@@ -1,0 +1,347 @@
+:root {
+  --blue: #004aad;
+  --green: #00b894;
+  --text: #222;
+  --maxw: 1100px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text);
+}
+
+.hero {
+  position: relative;
+  height: 90vh;
+  background: #004aad;
+  color: #fff;
+}
+
+.hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a.active {
+  border-bottom: 2px solid var(--green);
+}
+
+.logo-img {
+  height: 60px;       /* tu peux ajuster la taille */
+  width: 60px;        /* même largeur que la hauteur pour un cercle parfait */
+  border-radius: 50%; /* rend le logo rond */
+  object-fit: cover;  /* garde les proportions et coupe l’excédent */
+  border: 2px solid #fff; /* optionnel : contour blanc */
+}
+.hero-content h2 { font-size: 2.5rem; }
+
+.btn {
+  background: var(--green);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 40px 20px; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 300px;
+  overflow: hidden;
+}
+
+.card img { width: 100%; height: 200px; object-fit: cover; }
+
+.card h3 { margin: 15px 0 5px; }
+
+.join {
+  position: relative;
+  background: #004aad;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.join .overlay { background: rgba(0,0,0,0.6); padding: 60px 20px; }
+
+.footer {
+  background: var(--blue);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.sub-header { background: var(--blue); color: #fff; text-align: center; padding: 60px 20px; }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+.partners {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f4f4f4;
+}
+
+.partners h2 {
+  margin-bottom: 20px;
+}
+
+.partner-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.partner-logos img {
+  max-width: 100px;
+  max-height: 60px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  background: white;
+  border-radius: 5px;
+  object-fit: contain;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.partner-logos img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.institutions {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.institutions h2 {
+  color: #006633;
+  margin-bottom: 10px;
+}
+
+.institutions p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.city {
+  margin-bottom: 50px;
+  border-top: 2px solid #006633;
+  padding-top: 20px;
+}
+
+.city h3 {
+  color: #006633;
+  margin-bottom: 15px;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+
+.type h4 {
+  color: #333;
+  margin: 10px 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.school-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.school {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 220px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.school:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.school img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.school p {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #333;
+}
+/* GALERIE D'IMAGES */
+.gallery {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.gallery h2 {
+  color: #006633;
+  margin-bottom: 10px;
+}
+
+.gallery p {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.photo {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.photo img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo:hover img {
+  transform: scale(1.05);
+}
+
+.photo:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+}
+.temoignage {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.temoignage:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.temoignage img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.temoignage-text {
+  text-align: left;
+}
+
+.temoignage-text p {
+  font-size: 0.95em;
+  margin-bottom: 8px;
+}
+
+.temoignage-text h4 {
+  font-size: 1em;
+  color: #006633;
+  font-weight: 600;
+}
+
+/* ALTERNATE : image à droite, texte à gauche */
+.temoignage.alternate {
+  flex-direction: row-reverse; /* inverse l'ordre */
+}
+
+.temoignage.alternate img {
+  margin-right: 0;
+  margin-left: 20px; /* espace entre texte et image */
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .temoignage, .temoignage.alternate {
+    flex-direction: row; /* photo à gauche, texte à droite */
+  }
+}
+
+@media (max-width: 500px) {
+  .temoignage, .temoignage.alternate {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .temoignage img, .temoignage.alternate img {
+    margin: 0 0 10px 0;
+  }
+
+  .temoignage-text {
+    text-align: center;
+  }
+}
