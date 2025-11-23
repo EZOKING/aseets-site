@@ -68,6 +68,24 @@ body {
   text-decoration: none;
 }
 
+.form-status {
+  margin-top: 10px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.form-status.pending {
+  color: #cc7000;
+}
+
+.form-status.success {
+  color: #006633;
+}
+
+.form-status.error {
+  color: #b00020;
+}
+
 .container { max-width: var(--maxw); margin: 0 auto; padding: 40px 20px; }
 
 .cards {
