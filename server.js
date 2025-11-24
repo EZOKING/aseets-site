@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 const dataDir = path.join(__dirname, 'data');
 const messagesFile = path.join(dataDir, 'messages.json');
 
+// Prépare le stockage des messages dès le démarrage.
 function ensureStorage() {
   if (!fs.existsSync(dataDir)) {
     fs.mkdirSync(dataDir, { recursive: true });
@@ -39,6 +40,16 @@ app.use('/', express.static(__dirname));
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok' });
+});
+
+app.get('/api/messages', async (req, res) => {
+  try {
+    const messages = await readMessages();
+    res.json({ count: messages.length, messages });
+  } catch (error) {
+    console.error("Erreur lors de la lecture des messages :", error);
+    res.status(500).json({ error: 'Impossible de récupérer les messages pour le moment.' });
+  }
 });
 
 app.post('/api/contact', async (req, res) => {
